@@ -1,0 +1,14 @@
+.dub
+docs/
+exercises-dlang.so
+exercises-dlang.dylib
+exercises-dlang.dll
+exercises-dlang.a
+exercises-dlang.lib
+exercises-dlang-test-*
+main
+*.exe
+*.o
+*.obj
+*.lst
+*.out

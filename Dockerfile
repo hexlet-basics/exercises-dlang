@@ -1,12 +1,14 @@
 FROM hexletbasics/base-image:latest
 
-# TODO: replace exercises-template with "exercises-<language>"
-WORKDIR /exercises-template
+RUN apt-get update
 
-# https://github.com/pgrange/bash_unit
-RUN cd /usr/local/bin && curl -s https://raw.githubusercontent.com/pgrange/bash_unit/master/install.sh | bash
+RUN curl https://dlang.org/install.sh | bash -s
+
+RUN apt-get install dub -y
+
+WORKDIR /exercises-dlang
 
 COPY . .
 
-# TODO: replace
-ENV PATH=/exercises-template/bin:$PATH
+ENV PATH=~/.local/bin/:/exercises-dlang/bin:$PATH
+ENV PATH=~/.local/bin/:/root/dlang/dmd-2.101.2/linux/bin64:$PATH
