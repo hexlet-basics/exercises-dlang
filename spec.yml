@@ -1,7 +1,7 @@
 ---
 
 language:
-  docker_image: "hexletbasics/exercises-dlang"
+  docker_image: "ghcr.io/hexlet-basics/exercises-dlang"
   extension: dlang
   exercise_filename: main.d
   exercise_test_filename: test.cpp
